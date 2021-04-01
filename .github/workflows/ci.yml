@@ -41,6 +41,7 @@ jobs:
       - name: Coverage report
         env: 
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         run: |
           pip install coverage
           coverage run manage.py test --settings=core.settings.testing
@@ -49,5 +50,6 @@ jobs:
       - name: Django Testing
         env: 
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         run: |
           python manage.py test --settings=core.settings.testing
