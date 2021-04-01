@@ -1,4 +1,4 @@
-name: Auth_API CI
+name: Django CI
 
 on:
   push:
