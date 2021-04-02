@@ -5,7 +5,7 @@ from decouple import config
 DEBUG = False
 DATABASES = {
     'default': {
-        **dj_database_url.parse(config('DATABASE_URL')),
+        **dj_database_url.parse(config('DATABASE_URL'), engine='django.db.backends.postgresql'),
         'ENGINE': 'django.db.backends.postgresql',
     }
 }
