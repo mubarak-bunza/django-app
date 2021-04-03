@@ -57,10 +57,7 @@ jobs:
           coverage run manage.py test --settings=core.settings.testing
           coverage report
       
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          fail_ci_if_error: true
+     
 
       - name: Django Testing
         env: 
